@@ -2,7 +2,6 @@
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
-use Prettus\Moip\Subscription\Webservice\RenderToJson;
 use Prettus\Moip\Subscription\Webservice\ResourceUtils as Utils;
 use Prettus\Moip\Subscription\Webservice\Webservice;
 use Prettus\Moip\Subscription\Contracts\MoipHttpClient;
@@ -140,7 +139,7 @@ class MoipClient implements MoipHttpClient {
         try {
             $response = $this->client->get($url, $this->getOptions($options));
 
-            return Utils::formatInJson( $response );
+            return self::formatInJson( $response );
         } catch(RequestException $e) {
             if ($e->hasResponse()) {
                 return $this->composeError($e->getResponse());
@@ -245,7 +244,7 @@ class MoipClient implements MoipHttpClient {
             'http_reason' => $response->getReasonPhrase()
         );
 
-        $message = Utils::formatInJson($response);
+        $message = self::formatInJson($response);
 
         if ($message) {
             $error = $error + $message;

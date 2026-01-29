@@ -3,7 +3,6 @@
 use GuzzleHttp\Exception\ClientException;
 use Prettus\Moip\Subscription\Contracts\MoipHttpClient;
 use Prettus\Moip\Subscription\ResourceUtils;
-use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Class Plans
