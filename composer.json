@@ -10,13 +10,12 @@
     }
   ],
   "require": {
-    "php": ">=5.4.0",
-    "guzzlehttp/guzzle": "^6.0"
+    "php": "^8.2",
+    "guzzlehttp/guzzle": "^7.5"
   },
   "autoload": {
-    "psr-0": {
-      "Prettus\\Moip\\Subscription\\": "src/",
-      "Prettus\\Moip\\Subscription\\Test": "tests/"
+    "psr-4": {
+      "Prettus\\Moip\\": "Subscription/"
     }
   },
   "minimum-stability": "stable"
