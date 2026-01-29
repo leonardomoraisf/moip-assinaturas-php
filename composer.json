@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Prettus\\Moip\\": "Subscription/"
+      "Prettus\\Moip\\": "src/Prettus/Moip/"
     }
   },
   "minimum-stability": "stable"
